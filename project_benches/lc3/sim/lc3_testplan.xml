@@ -1,0 +1,369 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+          xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+ <Worksheet ss:Name="lc3_testplan">
+  <Table>
+   <Row>
+    <Cell><Data ss:Type="String">Section</Data></Cell>
+    <Cell><Data ss:Type="String">Title</Data></Cell>
+    <Cell><Data ss:Type="String">Description</Data></Cell>
+    <Cell><Data ss:Type="String">Link</Data></Cell>
+    <Cell><Data ss:Type="String">Type</Data></Cell>
+    <Cell><Data ss:Type="String">Weight</Data></Cell>
+    <Cell><Data ss:Type="String">Goal</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">Instruction encoding</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">1.1</Data></Cell>
+    <Cell><Data ss:Type="String">INSTR_X_MODE</Data></Cell>
+    <Cell><Data ss:Type="String">Each of the 12 opcodes in each addressing mode it has: ADD/AND register and immediate, NOT, PC-relative LD/ST/LEA/BR, indirect LDI/STI, base+offset LDR/STR, JMP register. JSR, RTI, TRAP and reserved are illegal_bins (14 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/imem_pkg/imem_transaction_coverage/instruction_cg/INSTR_X_MODE</Data></Cell>
+    <Cell><Data ss:Type="String">CoverPoint</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2</Data></Cell>
+    <Cell><Data ss:Type="String">Instruction sequences</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2.1</Data></Cell>
+    <Cell><Data ss:Type="String">PREV_X_CUR</Data></Cell>
+    <Cell><Data ss:Type="String">Every ordered pair of consecutive opcodes (144 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/imem_pkg/imem_transaction_coverage/sequence_cg/PREV_X_CUR</Data></Cell>
+    <Cell><Data ss:Type="String">Cross</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">3</Data></Cell>
+    <Cell><Data ss:Type="String">ALU operands</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">3.1</Data></Cell>
+    <Cell><Data ss:Type="String">OP_X_DR</Data></Cell>
+    <Cell><Data ss:Type="String">ADD, AND, NOT with each destination register (24 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/imem_pkg/imem_transaction_coverage/alu_cg/OP_X_DR</Data></Cell>
+    <Cell><Data ss:Type="String">Cross</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">3.2</Data></Cell>
+    <Cell><Data ss:Type="String">OP_X_SR1</Data></Cell>
+    <Cell><Data ss:Type="String">ADD, AND, NOT with each source register 1 (24 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/imem_pkg/imem_transaction_coverage/alu_cg/OP_X_SR1</Data></Cell>
+    <Cell><Data ss:Type="String">Cross</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">3.3</Data></Cell>
+    <Cell><Data ss:Type="String">OP_X_SR2</Data></Cell>
+    <Cell><Data ss:Type="String">Register mode: ADD and AND with each source register 2 (16 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/imem_pkg/imem_transaction_coverage/alu_cg/OP_X_SR2</Data></Cell>
+    <Cell><Data ss:Type="String">Cross</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">3.4</Data></Cell>
+    <Cell><Data ss:Type="String">OP_X_IMM5</Data></Cell>
+    <Cell><Data ss:Type="String">Immediate mode: ADD and AND with imm5 0, +15, -16, -1, other positive, other negative (12 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/imem_pkg/imem_transaction_coverage/alu_cg/OP_X_IMM5</Data></Cell>
+    <Cell><Data ss:Type="String">Cross</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">4</Data></Cell>
+    <Cell><Data ss:Type="String">Memory operands</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">4.1</Data></Cell>
+    <Cell><Data ss:Type="String">OP_X_REG</Data></Cell>
+    <Cell><Data ss:Type="String">Each memory instruction with each data register (56 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/imem_pkg/imem_transaction_coverage/mem_cg/OP_X_REG</Data></Cell>
+    <Cell><Data ss:Type="String">Cross</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">4.2</Data></Cell>
+    <Cell><Data ss:Type="String">PC_OP_X_PCOFFSET9</Data></Cell>
+    <Cell><Data ss:Type="String">PC-relative and indirect addressing: LD, LDI, LEA, ST, STI with PCoffset9 0, +255, -256, -1, other +, other - (30 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/imem_pkg/imem_transaction_coverage/mem_cg/PC_OP_X_PCOFFSET9</Data></Cell>
+    <Cell><Data ss:Type="String">Cross</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">4.3</Data></Cell>
+    <Cell><Data ss:Type="String">BASE_OP_X_OFFSET6</Data></Cell>
+    <Cell><Data ss:Type="String">Base+offset addressing: LDR and STR with offset6 0, +31, -32, -1, other +, other - (12 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/imem_pkg/imem_transaction_coverage/mem_cg/BASE_OP_X_OFFSET6</Data></Cell>
+    <Cell><Data ss:Type="String">Cross</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">4.4</Data></Cell>
+    <Cell><Data ss:Type="String">BASE_OP_X_BASER</Data></Cell>
+    <Cell><Data ss:Type="String">Base+offset addressing: LDR and STR with each base register (16 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/imem_pkg/imem_transaction_coverage/mem_cg/BASE_OP_X_BASER</Data></Cell>
+    <Cell><Data ss:Type="String">Cross</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">5</Data></Cell>
+    <Cell><Data ss:Type="String">Control operands</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">5.1</Data></Cell>
+    <Cell><Data ss:Type="String">BR_OFFSET9</Data></Cell>
+    <Cell><Data ss:Type="String">Branch offset 0, +255, -256, -1, other positive, other negative (6 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/imem_pkg/imem_transaction_coverage/ctrl_cg/BR_OFFSET9</Data></Cell>
+    <Cell><Data ss:Type="String">CoverPoint</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">5.2</Data></Cell>
+    <Cell><Data ss:Type="String">JMP_BASER</Data></Cell>
+    <Cell><Data ss:Type="String">JMP base register R0-R7 (JMP R7 = RET) (8 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/imem_pkg/imem_transaction_coverage/ctrl_cg/JMP_BASER</Data></Cell>
+    <Cell><Data ss:Type="String">CoverPoint</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">6</Data></Cell>
+    <Cell><Data ss:Type="String">Data dependencies in the instruction stream</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">6.1</Data></Cell>
+    <Cell><Data ss:Type="String">DIST2</Data></Cell>
+    <Cell><Data ss:Type="String">Register written two instructions earlier (ALU, LEA or load) read as SR1, SR2, base, JMP base or store data (15 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/imem_pkg/imem_transaction_coverage/hazard_cg/DIST2</Data></Cell>
+    <Cell><Data ss:Type="String">Cross</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">6.2</Data></Cell>
+    <Cell><Data ss:Type="String">ACROSS</Data></Cell>
+    <Cell><Data ss:Type="String">Distance-2 dependency with a memory or a control instruction in between (6 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/imem_pkg/imem_transaction_coverage/hazard_cg/ACROSS</Data></Cell>
+    <Cell><Data ss:Type="String">Cross</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">6.3</Data></Cell>
+    <Cell><Data ss:Type="String">SEQ3</Data></Cell>
+    <Cell><Data ss:Type="String">Load -&gt; use -&gt; BR, ALU -&gt; dependent ALU -&gt; store of its result, LDI -&gt; use -&gt; BR (3 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/imem_pkg/imem_transaction_coverage/seq3_cg/SEQ3</Data></Cell>
+    <Cell><Data ss:Type="String">CoverPoint</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">7</Data></Cell>
+    <Cell><Data ss:Type="String">Branches and jumps (pipeline)</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">7.1</Data></Cell>
+    <Cell><Data ss:Type="String">BR_NZP_X_PSR</Data></Cell>
+    <Cell><Data ss:Type="String">Every BR condition (n..nzp) resolved with psr N, Z and P (21 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/lc3_env_pkg/lc3_pipeline_coverage/branch_cg/BR_NZP_X_PSR</Data></Cell>
+    <Cell><Data ss:Type="String">Cross</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">7.2</Data></Cell>
+    <Cell><Data ss:Type="String">OUTCOME</Data></Cell>
+    <Cell><Data ss:Type="String">BR taken, BR not taken, JMP taken (3 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/lc3_env_pkg/lc3_pipeline_coverage/branch_cg/OUTCOME</Data></Cell>
+    <Cell><Data ss:Type="String">CoverPoint</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">7.3</Data></Cell>
+    <Cell><Data ss:Type="String">PREV_X_OUTCOME</Data></Cell>
+    <Cell><Data ss:Type="String">BR taken and not taken right after an ALU, load, LEA, store and control instruction (10 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/lc3_env_pkg/lc3_pipeline_coverage/branch_cg/PREV_X_OUTCOME</Data></Cell>
+    <Cell><Data ss:Type="String">Cross</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8</Data></Cell>
+    <Cell><Data ss:Type="String">Bypasses (pipeline)</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8.1</Data></Cell>
+    <Cell><Data ss:Type="String">PATH_X_PROD_X_CONS</Data></Cell>
+    <Cell><Data ss:Type="String">bypass_alu_1/2 from ALU and LEA producers, bypass_mem_1/2 from loads, into every consumer that reads that path (33 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/lc3_env_pkg/lc3_pipeline_coverage/bypass_cg/PATH_X_PROD_X_CONS</Data></Cell>
+    <Cell><Data ss:Type="String">Cross</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">8.2</Data></Cell>
+    <Cell><Data ss:Type="String">BOTH</Data></Cell>
+    <Cell><Data ss:Type="String">Both sources bypassed from the same producer (ALU and load) (2 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/lc3_env_pkg/lc3_pipeline_coverage/bypass_both_cg/BOTH</Data></Cell>
+    <Cell><Data ss:Type="String">CoverPoint</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">9</Data></Cell>
+    <Cell><Data ss:Type="String">Condition codes (pipeline)</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">9.1</Data></Cell>
+    <Cell><Data ss:Type="String">WRITER_X_PSR</Data></Cell>
+    <Cell><Data ss:Type="String">psr N, Z and P written by ALU, load and LEA instructions (9 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/lc3_env_pkg/lc3_pipeline_coverage/psr_cg/WRITER_X_PSR</Data></Cell>
+    <Cell><Data ss:Type="String">Cross</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">10</Data></Cell>
+    <Cell><Data ss:Type="String">ALU results (pipeline)</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">10.1</Data></Cell>
+    <Cell><Data ss:Type="String">OP_X_SIGN</Data></Cell>
+    <Cell><Data ss:Type="String">ADD, AND, NOT results zero, positive and negative (9 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/lc3_env_pkg/lc3_pipeline_coverage/alu_result_cg/OP_X_SIGN</Data></Cell>
+    <Cell><Data ss:Type="String">Cross</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">10.2</Data></Cell>
+    <Cell><Data ss:Type="String">OVERFLOW</Data></Cell>
+    <Cell><Data ss:Type="String">ADD wrap-around: positive + positive and negative + negative (2 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/lc3_env_pkg/lc3_pipeline_coverage/alu_result_cg/OVERFLOW</Data></Cell>
+    <Cell><Data ss:Type="String">CoverPoint</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">10.3</Data></Cell>
+    <Cell><Data ss:Type="String">CORNER</Data></Cell>
+    <Cell><Data ss:Type="String">AND and NOT with an all-zero and an all-one operand (4 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/lc3_env_pkg/lc3_pipeline_coverage/alu_result_cg/CORNER</Data></Cell>
+    <Cell><Data ss:Type="String">CoverPoint</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">11</Data></Cell>
+    <Cell><Data ss:Type="String">Memory access (pipeline)</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">11.1</Data></Cell>
+    <Cell><Data ss:Type="String">MEM_SEQ</Data></Cell>
+    <Cell><Data ss:Type="String">mem_state sequences: LD/LDR 3-0-3, ST/STR 3-2-3, LDI 3-1-0-3, STI 3-1-2-3 (4 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/lc3_env_pkg/lc3_pipeline_coverage/mem_seq_cg/MEM_SEQ</Data></Cell>
+    <Cell><Data ss:Type="String">CoverPoint</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">11.2</Data></Cell>
+    <Cell><Data ss:Type="String">OP_X_POINTER</Data></Cell>
+    <Cell><Data ss:Type="String">LDI and STI pointer 0x0000, 0xFFFF and near 0x3000 (6 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/lc3_env_pkg/lc3_pipeline_coverage/pointer_cg/OP_X_POINTER</Data></Cell>
+    <Cell><Data ss:Type="String">Cross</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">12</Data></Cell>
+    <Cell><Data ss:Type="String">Pipeline control (pipeline)</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">12.1</Data></Cell>
+    <Cell><Data ss:Type="String">ENABLES</Data></Cell>
+    <Cell><Data ss:Type="String">Every enable pattern of fetch/decode/execute/writeback (stalls and bubbles) (11 bins)</Data></Cell>
+    <Cell><Data ss:Type="String">/lc3_env_pkg/lc3_pipeline_coverage/pipeline_cg/ENABLES</Data></Cell>
+    <Cell><Data ss:Type="String">CoverPoint</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">100</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+</Workbook>
