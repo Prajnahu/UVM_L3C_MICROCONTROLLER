@@ -1,0 +1,65 @@
+uvmf:
+  environments:
+    lc3:
+      agents:
+      - initiator_responder: RESPONDER
+        name: imem_agent
+        type: imem
+      - initiator_responder: RESPONDER
+        name: dmem_agent
+        type: dmem
+      analysis_components:
+      - name: lc3_pred
+        parameters: []
+        type: lc3_predictor
+      analysis_exports: []
+      analysis_ports: []
+      config_constraints: []
+      config_vars: []
+      existing_library_component: 'True'
+      hvl_pkg_parameters: []
+      imports:
+      - name: lc3_common_pkg
+      - name: decode_in_pkg
+      non_uvmf_components: []
+      parameters: []
+      qvip_memory_agents: []
+      scoreboards:
+      - name: lc3_sb
+        sb_type: lc3_stream_scoreboard
+        trans_type: decode_in_transaction
+      subenvs:
+      - name: fetch_env
+        parameters: []
+        reg_block_instance_name: fetch_env_rm
+        type: fetch
+      - name: decode_env
+        parameters: []
+        reg_block_instance_name: decode_env_rm
+        type: decode
+      - name: execute_env
+        parameters: []
+        reg_block_instance_name: execute_env_rm
+        type: execute
+      - name: writeback_env
+        parameters: []
+        reg_block_instance_name: writeback_env_rm
+        type: writeback
+      - name: memaccess_env
+        parameters: []
+        reg_block_instance_name: memaccess_env_rm
+        type: memaccess
+      - name: control_env
+        parameters: []
+        reg_block_instance_name: control_env_rm
+        type: control
+      tlm_connections:
+      - driver: imem_agent.monitored_ap
+        receiver: lc3_pred.imem_agent_ae
+        validate: 'True'
+      - driver: lc3_pred.lc3_sb_ap
+        receiver: lc3_sb.expected_analysis_export
+        validate: 'True'
+      - driver: decode_env.decode_in_ap
+        receiver: lc3_sb.actual_analysis_export
+        validate: 'True'
