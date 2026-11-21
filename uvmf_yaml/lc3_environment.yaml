@@ -1,0 +1,40 @@
+uvmf:
+  environments:
+    "lc3":
+      agents:
+        - name: "imem_agent"
+          type: "imem"
+          initiator_responder: "RESPONDER"
+        - name: "dmem_agent"
+          type: "dmem"
+          initiator_responder: "RESPONDER"
+      subenvs:
+        - name: "fetch_env"
+          type: "fetch"
+        - name: "decode_env"
+          type: "decode"
+        - name: "execute_env"
+          type: "execute"
+        - name: "writeback_env"
+          type: "writeback"
+        - name: "memaccess_env"
+          type: "memaccess"
+        - name: "control_env"
+          type: "control"
+      analysis_components:
+        - name: "lc3_pred"
+          type: "lc3_predictor"
+      imports:
+        - name: "lc3_common_pkg"
+        - name: "decode_in_pkg"
+      scoreboards:
+        - name: "lc3_sb"
+          sb_type: "lc3_stream_scoreboard"
+          trans_type: "decode_in_transaction"
+      tlm_connections:
+        - driver: "imem_agent.monitored_ap"
+          receiver: "lc3_pred.imem_agent_ae"
+        - driver: "lc3_pred.lc3_sb_ap"
+          receiver: "lc3_sb.expected_analysis_export"
+        - driver: "decode_env.decode_in_ap"
+          receiver: "lc3_sb.actual_analysis_export"

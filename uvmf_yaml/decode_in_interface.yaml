@@ -1,0 +1,26 @@
+uvmf:
+  interfaces:
+    "decode_in":
+      clock: "clock"
+      reset: "reset"
+      reset_assertion_level: "True"
+      veloce_ready: "True"
+      ports:
+        - name: "dout"
+          width: "16"
+          dir: "input"
+        - name: "npc_in"
+          width: "16"
+          dir: "input"
+        - name: "enable_decode"
+          width: "1"
+          dir: "input"
+      transaction_vars:
+        - name: "dout"
+          type: "bit [15:0]"
+          isrand: "False"
+          iscompare: "True"
+        - name: "npc_in"
+          type: "bit [15:0]"
+          isrand: "False"
+          iscompare: "False"

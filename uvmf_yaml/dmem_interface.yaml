@@ -1,0 +1,35 @@
+uvmf:
+  interfaces:
+    "dmem":
+      clock: "clock"
+      reset: "reset"
+      reset_assertion_level: "True"
+      veloce_ready: "True"
+      ports:
+        - name: "Data_addr"
+          width: "16"
+          dir: "output"
+        - name: "Data_din"
+          width: "16"
+          dir: "output"
+        - name: "Data_rd"
+          width: "1"
+          dir: "output"
+        - name: "Data_dout"
+          width: "16"
+          dir: "input"
+        - name: "complete_data"
+          width: "1"
+          dir: "input"
+      transaction_vars:
+        - name: "data"
+          type: "bit [15:0]"
+          isrand: "True"
+          iscompare: "True"
+        - name: "addr"
+          type: "bit [15:0]"
+          isrand: "False"
+          iscompare: "True"
+      transaction_constraints:
+        - name: "data_c"
+          value: "{ data dist { 16'h0000 := 1, [16'h0001:16'h7FFF] :/ 4, [16'h8000:16'hFFFF] :/ 4 }; }"
